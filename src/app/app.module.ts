@@ -12,11 +12,16 @@ import {NgImageSliderModule} from 'ng-image-slider';
 import {FormsModule} from '@angular/forms';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProgrammeOfDayComponent } from './programme-of-day/programme-of-day.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { TeamComponent } from './team/team.component';
 
 const appRoutes: Routes = [
+  { path: '', component: AccueilComponent },
   { path: 'medias', component: MediasComponent },
   { path: 'programmes', component: ProgrammesComponent },
   { path: 'accueil', component: AccueilComponent },
+  { path: 'team', component: TeamComponent },
 ];
 
 @NgModule({
@@ -27,7 +32,10 @@ const appRoutes: Routes = [
     ProgrammeComponent,
     ProgrammesComponent,
     AccueilComponent,
-    ProgrammeOfDayComponent
+    ProgrammeOfDayComponent,
+    NavbarComponent,
+    FooterComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
