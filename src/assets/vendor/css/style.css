@@ -122,7 +122,7 @@ a {
 
 .bg-image {
   background-size: cover;
-  background-repeat: no-rpeeat;
+  background-repeat: no-repeat;
   overflow: hidden;
   background-position: center center; }
   .bg-image.center {
@@ -1533,7 +1533,7 @@ a {
 .unit-9 {
   background-size: cover;
   background-position: center center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   height: 300px;
   position: relative;
   display: block;

@@ -15,13 +15,22 @@ import { ProgrammeOfDayComponent } from './programme-of-day/programme-of-day.com
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { TeamComponent } from './team/team.component';
+import { TeamsComponent } from './teams/teams.component';
+import { DedicacesComponent } from './dedicaces/dedicaces.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageDescriptionComponent } from './page-description/page-description.component';
+import { AboutComponent } from './about/about.component';
+import { EventsComponent } from './events/events.component';
 
 const appRoutes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'medias', component: MediasComponent },
   { path: 'programmes', component: ProgrammesComponent },
   { path: 'accueil', component: AccueilComponent },
-  { path: 'team', component: TeamComponent },
+  { path: 'equipes', component: TeamsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'apropos', component: AboutComponent },
+  { path: 'evenemnts', component: EventsComponent },
 ];
 
 @NgModule({
@@ -35,7 +44,13 @@ const appRoutes: Routes = [
     ProgrammeOfDayComponent,
     NavbarComponent,
     FooterComponent,
-    TeamComponent
+    TeamComponent,
+    TeamsComponent,
+    DedicacesComponent,
+    ContactComponent,
+    PageDescriptionComponent,
+    AboutComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
