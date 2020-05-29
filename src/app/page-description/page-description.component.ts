@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PageDescriptionComponent implements OnInit {
 
   @Input() title: number;
+  @Input() img: string;
 
   constructor() {
   }

@@ -1,12 +1,25 @@
-<div class="">
-  <h2><u>Programmes du jour</u></h2>
-  <div class="card-group scrolling-wrapper">
-    <div class="card bg-dark text-white" *ngFor="let program of programs; let i = index" (click)="test(program)">
-      <img class="card-img" [src]="program.img" alt="Card image" style="height: 100%">
-      <div class="card-img-overlay">
-        <h3 class="card-title">{{program.title}}</h3>
-        <p class="card-text">{{program.hour}}</p>
+<div class="site-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+        <h2 class="mb-5">Programmes du jour</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
+          officia, error reiciendis ab quod?</p>
       </div>
+    </div>
+
+    <div class="card-group scrolling-wrapper">
+      <div class="card bg-dark text-white" *ngFor="let program of programs; let i = index" (click)="test(program)">
+        <img class="card-img" [src]="program.img" alt="Card image" style="height: 100%">
+        <div class="card-img-overlay">
+          <h3 class="card-title">{{program.title}}</h3>
+          <p class="card-text">{{program.hour}}</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+
+

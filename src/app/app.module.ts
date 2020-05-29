@@ -22,6 +22,7 @@ import { PageDescriptionComponent } from './page-description/page-description.co
 import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { ShowsComponent } from './shows/shows.component';
+import { EventComponent } from './event/event.component';
 
 const appRoutes: Routes = [
   { path: '', component: AccueilComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'apropos', component: AboutComponent },
   { path: 'evenements', component: EventsComponent },
   { path: 'shows', component: ShowsComponent },
+  { path: 'evenements/evenement/:id', component: EventComponent },
 ];
 
 @NgModule({
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     PageDescriptionComponent,
     AboutComponent,
     EventsComponent,
-    ShowsComponent
+    ShowsComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
