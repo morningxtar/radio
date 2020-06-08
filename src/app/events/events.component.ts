@@ -38,16 +38,10 @@ export class EventsComponent implements OnInit {
     },
   ];
 
-  @ViewChild('videoPlayer') videoplayer: any;
-
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  toggleVideo() {
-    this.videoplayer.play();
   }
 
 }
