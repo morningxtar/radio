@@ -23,10 +23,14 @@ import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
 import { ShowsComponent } from './shows/shows.component';
 import { EventComponent } from './event/event.component';
+import { PhotosComponent } from './photos/photos.component';
+import { AudiosComponent } from './audios/audios.component';
 
 const appRoutes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'medias', component: MediasComponent },
+  { path: 'medias/photos', component: PhotosComponent },
+  { path: 'medias/audios', component: AudiosComponent },
   { path: 'programmes', component: ProgrammesComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'equipes', component: TeamsComponent },
@@ -56,7 +60,9 @@ const appRoutes: Routes = [
     AboutComponent,
     EventsComponent,
     ShowsComponent,
-    EventComponent
+    EventComponent,
+    PhotosComponent,
+    AudiosComponent
   ],
   imports: [
     BrowserModule,

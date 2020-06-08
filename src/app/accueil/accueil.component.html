@@ -1,5 +1,5 @@
 
-<div class="site-blocks-cover overlay" style="background-image: url(assets/wobin/644b4e13-8e9b-476a-979f-e95c0b45cb3f.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover overlay" style="background-image: url(./assets/wobin/644b4e13-8e9b-476a-979f-e95c0b45cb3f.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
@@ -111,28 +111,39 @@
 <!--</div>-->
 
 
-<div class="site-section">
+<div class="site-section" style="padding-bottom: 10%">
   <div class="container">
     <div class="row">
-      <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto" data-aos="fade-up">
-        <h2 class="mb-5">Nouvelles et évènements</h2>
-        <p style="color: #0b0b0b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
-      </div>
-    </div>
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div *ngFor="let event of events" class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-            <a [routerLink]="['/evenements/evenement', event.id - 1]"><img [src]="event.img" alt="Image" class="img-fluid" style="height: 80%; width: 100%"></a>
-            <div class="p-4 bg-white">
-              <span class="d-block text-secondary small text-uppercase">{{event.date}}</span>
-              <h2 class="h5 text-black mb-3"><a [routerLink]="['/evenements/evenement', event.id - 1]">{{event.title}}</a></h2>
-            </div>
+      <div *ngFor="let event of events" class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div *ngIf="!event.video; else videoBlock">
+          <a [routerLink]="['evenement', event.id - 1]"><img [src]="event.img" alt="Image" class="img-fluid"
+                                                             style="height: 300px; width: 100%"></a>
+          <div class="p-4 bg-white" style="height: 200px">
+            <span class="d-block text-secondary small text-uppercase">{{event.date}}</span>
+            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id - 1]">{{event.title}}</a></h2>
           </div>
         </div>
+
+        <ng-template #videoBlock>
+          <a [routerLink]="['evenement', event.id - 1]">
+            <video class="owl-video-playing" width="100%" height="300">
+              <source [src]="event.img" type="video/mp4">
+              Browser not supported
+            </video>
+          </a>
+          <div class="p-4 bg-white" style="height: 200px">
+            <span class="d-block text-secondary small text-uppercase">JAN 20TH, 2019</span>
+            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id - 1]">LA & FRUITS</a></h2>
+            <span>
+            Usine de transformation de la mangue fraîche en mangue séchée
+          </span>
+          </div>
+        </ng-template>
       </div>
     </div>
+
   </div>
+
 </div>
 
 <!--<app-programme-of-day></app-programme-of-day>-->

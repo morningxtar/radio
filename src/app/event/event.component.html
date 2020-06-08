@@ -12,16 +12,24 @@
 </div>
 
 
-
 <div class="site-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
 
         <figure>
-          <img src="{{events[id].img}}" alt="Image" class="img-fluid">
+          <div *ngIf="!events[id].video; else videoBlock">
+            <img src="{{events[id].img}}" alt="Image" class="img-fluid">
+          </div>
+          <ng-template #videoBlock>
+            <video width="100%" height="500px" controls>
+              <source [src]="events[id].img" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </ng-template>
           <figcaption>{{events[id].title}}</figcaption>
         </figure>
+
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ratione dolores expedita id repudiandae
           nostrum aut, impedit repellat nam veritatis, pariatur facere reprehenderit alias atque molestias ipsum officia
