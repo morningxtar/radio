@@ -39,7 +39,7 @@ const appRoutes: Routes = [
   { path: 'evenements', component: EventsComponent },
   { path: 'shows', component: ShowsComponent },
   { path: 'evenements/evenement/:id', component: EventComponent },
-  { path: 'accueil/evenement/:id', component: EventComponent },
+  { path: 'accueil/evenements/evenement/:id', redirectTo: 'evenements/evenement/:id', pathMatch: 'full' },
 ];
 
 @NgModule({
