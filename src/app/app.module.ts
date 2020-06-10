@@ -27,7 +27,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { AudiosComponent } from './audios/audios.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AccueilComponent },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'medias', component: MediasComponent },
   { path: 'medias/photos', component: PhotosComponent },
   { path: 'medias/audios', component: AudiosComponent },
