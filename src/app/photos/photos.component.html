@@ -4,14 +4,14 @@
   <div class="container">
     <ngb-carousel #carousel [interval]="3000">
       <ng-template ngbSlide *ngFor="let image of images; index as i">
-        <div class="carousel-caption">
-          <h3>{{image.title}}</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nulla, repellat? Aliquid, atque aut
-            consectetur dolor harum iusto libero maxime officia officiis perspiciatis praesentium quae quos rerum sequi
-            ullam voluptatum.
-          </p>
-        </div>
+<!--        <div class="carousel-caption">-->
+<!--          <h3>{{image.title}}</h3>-->
+<!--          <p>-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nulla, repellat? Aliquid, atque aut-->
+<!--            consectetur dolor harum iusto libero maxime officia officiis perspiciatis praesentium quae quos rerum sequi-->
+<!--            ullam voluptatum.-->
+<!--          </p>-->
+<!--        </div>-->
         <a href="#" target="_blank" rel="nofollow noopener noreferrer">
           <div class="picsum-img-wrapper">
             <img [src]="image.image" alt="{{image.alt}}" style="width: 100%; height: 700px">

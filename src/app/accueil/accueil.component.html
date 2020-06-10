@@ -116,16 +116,16 @@
     <div class="row">
       <div *ngFor="let event of events" class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
         <div *ngIf="!event.video; else videoBlock">
-          <a [routerLink]="['evenement', event.id - 1]"><img [src]="event.img" alt="Image" class="img-fluid"
+          <a [routerLink]="['evenements/evenement', event.id - 1]"><img [src]="event.img" alt="Image" class="img-fluid"
                                                              style="height: 300px; width: 100%"></a>
           <div class="p-4 bg-white" style="height: 200px">
             <span class="d-block text-secondary small text-uppercase">{{event.date}}</span>
-            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id - 1]">{{event.title}}</a></h2>
+            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenements/evenement', event.id - 1]">{{event.title}}</a></h2>
           </div>
         </div>
 
         <ng-template #videoBlock>
-          <a [routerLink]="['evenement', event.id - 1]">
+          <a [routerLink]="['evenements/evenement', event.id - 1]">
             <video class="owl-video-playing" width="100%" height="300">
               <source [src]="event.img" type="video/mp4">
               Browser not supported
@@ -133,7 +133,7 @@
           </a>
           <div class="p-4 bg-white" style="height: 200px">
             <span class="d-block text-secondary small text-uppercase">JAN 20TH, 2019</span>
-            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id - 1]">LA & FRUITS</a></h2>
+            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenements/evenement', event.id - 1]">LA & FRUITS</a></h2>
             <span>
             Usine de transformation de la mangue fraîche en mangue séchée
           </span>
