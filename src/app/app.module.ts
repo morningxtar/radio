@@ -36,10 +36,13 @@ const appRoutes: Routes = [
   { path: 'equipes', component: TeamsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'apropos', component: AboutComponent },
-  { path: 'evenements', component: EventsComponent },
+  { path: 'evenements', children: [
+      {path: 'evenement/:id', component: EventComponent },
+      {path: '', component: EventsComponent, pathMatch: 'full' },
+    ] },
   { path: 'shows', component: ShowsComponent },
-  { path: 'evenements/evenement/:id', component: EventComponent },
-  { path: 'accueil/evenements/evenement/:id', redirectTo: 'evenements/evenement/:id', pathMatch: 'full' },
+  // { path: 'evenements/evenement/:id', component: EventComponent },
+  { path: 'accueil/evenements/evenement/:id', redirectTo: 'evenements/evenement/:id' },
 ];
 
 @NgModule({
