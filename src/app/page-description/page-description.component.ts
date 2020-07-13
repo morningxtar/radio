@@ -10,6 +10,7 @@ export class PageDescriptionComponent implements OnInit {
   @Input() title: number;
   @Input() img: string;
 
+  description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
   constructor() {
   }
 
