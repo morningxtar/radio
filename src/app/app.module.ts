@@ -82,7 +82,7 @@ const appRoutes: Routes = [
     NgImageSliderModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    NgbCarouselModule
+    NgbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@
       <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
 
         <h1 class="text-white">{{events[id].title}}</h1>
-        <p>{{events[id].date}} <span class="mx-3"></span> By Admin</p>
+        <p>{{events[id].date}} <span class="mx-3"></span> Par {{events[id].auteur}}</p>
       </div>
     </div>
   </div>
@@ -19,15 +19,15 @@
 
         <figure>
           <div *ngIf="!events[id].video; else videoBlock">
-            <img src="{{events[id].img}}" alt="Image" class="img-fluid">
+            <img src="{{events[id].img}}" style="height: 600px; width: 600px" alt="Image" class="img-fluid">
           </div>
           <ng-template #videoBlock>
             <video width="100%" height="500px" controls>
-              <source [src]="events[id].img" type="video/mp4">
+              <source [src]="events[id].videoSrc" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </ng-template>
-          <figcaption>{{events[id].title}}</figcaption>
+          <figcaption><h4>{{events[id].title}}</h4></figcaption>
         </figure>
 
 
@@ -39,21 +39,37 @@
           quas quae inventore dolorem ut quibusdam aliquam vel unde at explicabo! Esse saepe cupiditate nobis rerum
           soluta error alias explicabo reprehenderit pariatur! Architecto minus aliquid reiciendis iure, optio officia
           at a autem non blanditiis deserunt in labore.</p>
-        <p>Quia mollitia, at labore eveniet perspiciatis accusantium molestiae tempore quos placeat quam laudantium
-          tenetur ut distinctio maiores minus beatae et vero suscipit, excepturi veritatis veniam. Aliquam eaque laborum
-          obcaecati. Perferendis, assumenda vel facilis fuga libero tempora reprehenderit dolorum corrupti eligendi ut
-          rem aut magni eius possimus sed! Culpa, libero, eius.</p>
-        <p>Optio repellat libero aliquam delectus ipsa officia voluptatibus repellendus fugiat earum? Nam, sunt? Dolor
-          at ullam aperiam iusto deserunt, nulla libero illo veniam totam tenetur inventore voluptates nemo atque, nam.
-          Voluptas dignissimos minus voluptatem molestiae? Nihil hic, consequuntur perspiciatis sapiente, doloremque
-          impedit ipsa doloribus sed saepe ratione dicta voluptatibus at!</p>
-        <p>Obcaecati voluptatem ea vitae id doloremque hic. Perspiciatis quia libero consectetur unde ullam, veritatis
-          voluptate laborum enim quos, atque quasi animi sapiente beatae inventore obcaecati, esse rem ducimus quam
-          officia ipsum temporibus repellendus facere. Explicabo delectus, magni eum voluptatibus nemo totam
-          reprehenderit dolores deserunt rerum suscipit aperiam culpa, cupiditate nam.</p>
-
       </div>
 
     </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Les photos de l'évènements</h2>
+      </div>
+    </div>
+
+    <ngb-carousel #carousel [interval]="3000" style="width: 40%; height: 500px">
+      <ng-template ngbSlide *ngFor="let image of eventsPhotos[id].photos; index as i">
+        <!--        <div class="carousel-caption">-->
+        <!--          <h3>{{image.title}}</h3>-->
+        <!--          <p>-->
+        <!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nulla, repellat? Aliquid, atque aut-->
+        <!--            consectetur dolor harum iusto libero maxime officia officiis perspiciatis praesentium quae quos rerum sequi-->
+        <!--            ullam voluptatum.-->
+        <!--          </p>-->
+        <!--        </div>-->
+        <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper gallery-carousel">
+            <img style="height: 500px; width: 100%" [src]="image" alt="" >
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
   </div>
 </div>
+
+<section id="gallery">
+
+
+</section><!-- End Gallery Section -->

@@ -88,13 +88,14 @@ export class ProgrammesComponent implements OnInit {
         content: 'Eligendi quo eveniet est nobis et ad temporibus odio quo.',
         author: 'Alejandrin Littel',
       },
-      {
-        hour: '20h',
-        title: 'Quo qui praesentium nesciunt',
-        img: 'assets/background/istockphoto-1138395421-612x612.jpg',
-        content: 'Voluptatem et alias dolorum est aut sit enim neque veritatis.',
-        author: 'Willow Trantow',
-      }],
+      // {
+      //   hour: '20h',
+      //   title: 'Quo qui praesentium nesciunt',
+      //   img: 'assets/background/istockphoto-1138395421-612x612.jpg',
+      //   content: 'Voluptatem et alias dolorum est aut sit enim neque veritatis.',
+      //   author: 'Willow Trantow',
+      // }
+      ],
   ];
   idProg = 0;
 
