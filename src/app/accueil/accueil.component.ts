@@ -12,7 +12,7 @@ export class AccueilComponent implements OnInit {
     {
       id: 1,
       title: 'Remise de kits sanitaires aux populations de sinematiali par le préfet',
-      img: '/assets/fatou/remiseKitsSanitaire/9cb63e68-79e3-4ed7-a2e7-0446f0f89cb7.jpg',
+      img: './assets/fatou/remiseKitsSanitaire/9cb63e68-79e3-4ed7-a2e7-0446f0f89cb7.jpg',
       date: 'Jan 20th, 2019',
       video: false
     },
