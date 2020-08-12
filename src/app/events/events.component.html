@@ -6,11 +6,11 @@
   <div class="container">
     <div class="row">
       <div *ngFor="let event of events" class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-          <a [routerLink]="['evenement', event.id - 1]"><img [src]="event.img" alt="Image" class="img-fluid"
+          <a [routerLink]="['evenement', event.id]"><img [src]="event.img" alt="Image" class="img-fluid"
                                                              style="height: 300px; width: 100%"></a>
           <div class="p-4 bg-white" style="height: 200px">
             <span class="d-block text-secondary small text-uppercase">{{event.date}}</span>
-            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id - 1]">{{event.title}}</a></h2>
+            <h2 class="h5 text-black mb-3"><a [routerLink]="['evenement', event.id]">{{event.title}}</a></h2>
           </div>
 
       </div>

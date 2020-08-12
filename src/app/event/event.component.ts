@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {AES, enc} from 'crypto-ts';
 
 @Component({
   selector: 'app-event',
@@ -95,6 +96,7 @@ export class EventComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this.activatedroute.snapshot.paramMap.get('id');
+    this.id = Number(AES.decrypt(this.id, 'test').toString(enc.Utf8)) - 1;
     console.log(this.id);
   }
 

@@ -25,6 +25,7 @@ import {ShowsComponent} from './shows/shows.component';
 import {EventComponent} from './event/event.component';
 import {PhotosComponent} from './photos/photos.component';
 import {AudiosComponent} from './audios/audios.component';
+import { ActivitesComponent } from './activites/activites.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'accueil', pathMatch: 'full'},
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
   {path: 'equipes', component: TeamsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'apropos', component: AboutComponent},
+  {path: 'activites', component: ActivitesComponent},
   {
     path: 'evenements', children: [
       {path: 'evenement/:id', component: EventComponent},
@@ -74,7 +76,8 @@ const appRoutes: Routes = [
     ShowsComponent,
     EventComponent,
     PhotosComponent,
-    AudiosComponent
+    AudiosComponent,
+    ActivitesComponent
   ],
   imports: [
     BrowserModule,
