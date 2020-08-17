@@ -26,6 +26,8 @@ import {EventComponent} from './event/event.component';
 import {PhotosComponent} from './photos/photos.component';
 import {AudiosComponent} from './audios/audios.component';
 import { ActivitesComponent } from './activites/activites.component';
+import { EmissionsComponent } from './emissions/emissions.component';
+import { EmissionComponent } from './emission/emission.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'accueil', pathMatch: 'full'},
@@ -48,6 +50,12 @@ const appRoutes: Routes = [
     path: 'evenements', children: [
       {path: 'evenement/:id', component: EventComponent},
       {path: '', component: EventsComponent, pathMatch: 'full'},
+    ]
+  },
+  {
+    path: 'emissions', children: [
+      {path: 'emission/:id', component: EmissionComponent},
+      {path: '', component: EmissionsComponent, pathMatch: 'full'},
     ]
   },
   {path: 'shows', component: ShowsComponent},
@@ -77,7 +85,9 @@ const appRoutes: Routes = [
     EventComponent,
     PhotosComponent,
     AudiosComponent,
-    ActivitesComponent
+    ActivitesComponent,
+    EmissionsComponent,
+    EmissionComponent
   ],
   imports: [
     BrowserModule,

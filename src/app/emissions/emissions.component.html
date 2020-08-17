@@ -1,0 +1,20 @@
+<app-page-description title="Emissions" img="./assets/wobin/644b4e13-8e9b-476a-979f-e95c0b45cb3f.jpg"></app-page-description>
+
+<div class="site-section" style="padding-bottom: 10%">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let emission of emissions" class="col-md-6 col-lg-4 mb-2 card" data-aos="fade-up" data-aos-delay="100">
+        <a [routerLink]="['emission', emission.key]"><img [src]="emission.img" alt="Image" class="card-img-top"
+                                                       >
+          <div class="card-title">
+            <span class="d-block text-secondary small text-uppercase">{{emission.date}}</span>
+            <h2 class="h5 text-black mb-3">{{emission.title}}</h2>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
