@@ -23,14 +23,6 @@ export class EmissionComponent implements OnInit {
       source: './assets/coq/WhatsApp Audio 2020-08-14 at 23.31.43.mp4',
       key: 'coq-de-la-bagoue',
     },
-    {
-      id: 0,
-      title: 'Coq De La Bagoue',
-      img: './assets/coq/3d3d264a-8ba6-4119-816b-aeae35ddb10a.jpg',
-      date: '11/08/2020',
-      source: './assets/coq/WhatsApp Audio 2020-08-14 at 23.31.43.mp4',
-      key: 'coq-de-la-bagoue',
-    },
   ];
 
   ngOnInit(): void {
